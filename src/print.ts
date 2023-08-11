@@ -1,6 +1,5 @@
 import { Plugin } from 'ckeditor5/src/core';
 import { ButtonView } from 'ckeditor5/src/ui';
-
 import ckeditor5Icon from '../theme/icons/ckeditor.svg';
 
 export default class Print extends Plugin {
@@ -25,10 +24,20 @@ export default class Print extends Plugin {
 
 			// Insert a text into the editor after clicking the button.
 			this.listenTo( view, 'execute', () => {
-				model.change( writer => {
-					const textNode = writer.createText( 'Hello CKEditor 5!' );
+				model.change( () => {
+					const $printFrame = document.createElement( 'iframe' );
 
-					model.insertContent( textNode );
+					$printFrame.srcdoc = `
+					<html>
+						<head>
+							<title>${ document.title }</title>
+							<link rel="stylesheet" href="" type="text/css">
+						</head>
+						<body class="ck-content">
+							${ '' }
+						<script>window.addEventListener( 'DOMContentLoaded', () => { window.print(); } );</script></body>
+					</html>
+					`;
 				} );
 
 				editor.editing.view.focus();
