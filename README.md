@@ -6,6 +6,7 @@ This package was created by the [ckeditor5-package-generator](https://www.npmjs.
 ## Table of contents
 
 * [Developing the package](#developing-the-package)
+* [Install plugin](#install)
 * [Available scripts](#available-scripts)
   * [`start`](#start)
   * [`test`](#test)
@@ -21,6 +22,20 @@ This package was created by the [ckeditor5-package-generator](https://www.npmjs.
 ## Developing the package
 
 To read about the CKEditor 5 framework, visit the [CKEditor5 documentation](https://ckeditor.com/docs/ckeditor5/latest/framework/index.html).
+
+## Install
+
+```bash
+  npm install @fwcie/ckeditor5-print
+```
+
+## Available options
+
+| option         | type      | default   | description                         |
+|--------------  |---------  |---------  |-----------------------------------  |
+| injectCkeCSS   | boolean   | true      | Inject the ckeditor css for print   |
+|                |           |           |                                     |
+|                |           |           |                                     |
 
 ## Available scripts
 
