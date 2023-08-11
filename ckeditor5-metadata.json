@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    {
+      "name": "Print",
+      "className": "Print",
+      "description": "Adds text to the editor.",
+      "path": "src/print.ts",
+      "uiComponents": [
+        {
+          "name": "printButton",
+          "type": "Button",
+          "iconPath": "theme/icons/ckeditor.svg"
+        }
+      ]
+    }
+  ]
+}
