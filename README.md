@@ -1,4 +1,4 @@
-# @fwcie/ckeditor5-print
+# @fabwcie/ckeditor5-print
 
 Add button for print ckeditor content.
 
@@ -12,7 +12,7 @@ This package was created by the [ckeditor5-package-generator](https://www.npmjs.
 ## Install
 
 ```bash
-npm install @fwcie/ckeditor5-print
+npm install @fabwcie/ckeditor5-print
 ```
 
 ## Available options
@@ -28,7 +28,7 @@ npm install @fwcie/ckeditor5-print
 Using module import
 
 ```typescript
-import { Print } from '@fwcie/ckeditor5-print';
+import { Print } from '@fabwcie/ckeditor5-print';
 
 ClassicEditor
   .create( document.querySelector( '#editor' ), {
@@ -50,7 +50,7 @@ Download js file here
 <script src="path/to/print.js"></script>
 
 <!-- Or with CDN -->
-<script src="https://cdn/@fwcie/ckeditor5-print/print.js"></script>
+<script src="https://cdn/@fabwcie/ckeditor5-print/print.js"></script>
 ```
 
 and that all, print button appear automaticaly !
