@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { Print as PrintDll, icons } from '../src';
 import Print from '../src/print';
 
-import ckeditor from './../theme/icons/ckeditor.svg';
+import ckeditor from './../theme/icons/print.svg';
 
 describe( 'CKEditor5 Print DLL', () => {
 	it( 'exports Print', () => {
@@ -11,7 +11,7 @@ describe( 'CKEditor5 Print DLL', () => {
 
 	describe( 'icons', () => {
 		it( 'exports the "ckeditor" icon', () => {
-			expect( icons.ckeditor ).to.equal( ckeditor );
+			expect( icons.print ).to.equal( ckeditor );
 		} );
 	} );
 } );
