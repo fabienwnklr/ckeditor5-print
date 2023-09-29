@@ -45,14 +45,19 @@ describe( 'Print', () => {
 			expect( editor.ui.componentFactory.has( 'printButton' ) ).to.equal( true );
 		} );
 
-		it( 'should add a text into the editor after clicking the icon', () => {
+		it( 'should add iframe after clicking the icon', () => {
 			const icon = editor.ui.componentFactory.create( 'printButton' );
-
-			expect( editor.getData() ).to.equal( '' );
 
 			icon.fire( 'execute' );
 
-			expect( editor.getData() ).to.equal( '<p>Hello CKEditor 5!</p>' );
+			const iframe = document.getElementById( 'ckeditor_print_iframe' ) as HTMLIFrameElement;
+
+			expect( iframe ).not.to.be.null;
+
+			document.querySelector( 'print-preview-app' )?.shadowRoot?.querySelector( '#sidebar' )
+				?.shadowRoot?.querySelector( 'print-preview-button-strip' )
+				?.shadowRoot?.querySelector( '.controls cr-button:last-child' )
+				?.dispatchEvent( new Event( 'click' ) );
 		} );
 	} );
 } );
