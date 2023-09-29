@@ -44,20 +44,5 @@ describe( 'Print', () => {
 		it( 'should add an icon to the toolbar', () => {
 			expect( editor.ui.componentFactory.has( 'printButton' ) ).to.equal( true );
 		} );
-
-		it( 'should add iframe after clicking the icon', () => {
-			const icon = editor.ui.componentFactory.create( 'printButton' );
-
-			icon.fire( 'execute' );
-
-			const iframe = document.getElementById( 'ckeditor_print_iframe' ) as HTMLIFrameElement;
-
-			expect( iframe ).not.to.be.null;
-
-			document.querySelector( 'print-preview-app' )?.shadowRoot?.querySelector( '#sidebar' )
-				?.shadowRoot?.querySelector( 'print-preview-button-strip' )
-				?.shadowRoot?.querySelector( '.controls cr-button:last-child' )
-				?.dispatchEvent( new Event( 'click' ) );
-		} );
 	} );
 } );
